@@ -10,8 +10,12 @@ return {
 			end
 
 			-- Navigation
-			map("n", "]h", gs.next_hunk, "Next Hunk")
-			map("n", "[h", gs.prev_hunk, "Prev Hunk")
+			map("n", "]h", function()
+				gs.nav_hunk("next")
+			end, "Next Hunk")
+			map("n", "[h", function()
+				gs.nav_hunk("prev")
+			end, "Prev Hunk")
 
 			-- Actions
 			map("n", "<leader>hs", gs.stage_hunk, "Stage hunk")
@@ -41,6 +45,8 @@ return {
 			end, "Diff this ~")
 
 			-- Text object
+			-- mode-x: activated in visual mode only
+			-- mode-o: activated in operator-pending mode only
 			map({ "o", "x" }, "ih", ":<C-U>Gitsigns select_hunk<CR>", "Gitsigns select hunk")
 		end,
 	},
