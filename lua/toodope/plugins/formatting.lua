@@ -36,7 +36,18 @@ return {
 			})
 
 			-- To call fix all from eslint-lsp
-			vim.cmd("EslintFixAll")
+			-- https://neovim.discourse.group/t/how-do-i-get-the-correct-filetype-based-on-a-file-extension/3163
+			local filetype = vim.filetype.match({ buf = 0 })
+			local pattern = { "javascript", "javascriptreact", "typescript", "typescriptreact" }
+			print(filetype)
+			if filetype then
+				for _, ext in ipairs(pattern) do
+					if filetype == ext then
+						vim.cmd("EslintFixAll")
+						return
+					end
+				end
+			end
 		end, { desc = "Format file or range (in visual mode)" })
 	end,
 }

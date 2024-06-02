@@ -4,7 +4,7 @@ return {
 	dependencies = {
 		"hrsh7th/cmp-nvim-lsp",
 		{ "antosha417/nvim-lsp-file-operations", config = true },
-		{ "folke/neodev.nvim", opts = {} },
+		{ "folke/lazydev.nvim", ft = "lua", opts = {} }, -- Configures Lua Language Server
 	},
 	config = function()
 		-- import lspconfig plugin
@@ -92,7 +92,8 @@ return {
 					--- ...
 					on_attach = function(client, bufnr)
 						vim.api.nvim_create_autocmd("BufWritePre", {
-							buffer = bufnr,
+							group = vim.api.nvim_create_augroup("EslintLspFixAfterWrite", {}),
+							pattern = { "javascript", "javascriptreact", "typescript", "typescriptreact" },
 							command = "EslintFixAll",
 						})
 					end,
