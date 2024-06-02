@@ -10,6 +10,8 @@ return {
 	config = function()
 		local telescope = require("telescope")
 		local actions = require("telescope.actions")
+		local builtin = require("telescope.builtin")
+		local action_state = require("telescope.actions.state")
 
 		telescope.setup({
 			defaults = {
@@ -67,9 +69,46 @@ return {
 
 		telescope.load_extension("fzf")
 
+		-- https://medium.com/@jogarcia/delete-buffers-on-telescope-21cc4cf61b63
+		local buffer_searcher
+		buffer_searcher = function()
+			builtin.buffers({
+				sort_mru = true,
+				-- ignore_current_buffer = true,
+				-- show_all_buffers = false,
+				attach_mappings = function(prompt_bufnr, map)
+					local refresh_buffer_searcher = function()
+						actions.close(prompt_bufnr)
+						vim.schedule(buffer_searcher)
+					end
+					local delete_buf = function()
+						-- https://github.com/nvim-telescope/telescope.nvim/issues/621
+						local picker = action_state.get_current_picker(prompt_bufnr)
+						picker:delete_selection(function(selection)
+							vim.api.nvim_buf_delete(selection.bufnr, { force = true })
+						end)
+						refresh_buffer_searcher()
+					end
+					local delete_multiple_buf = function()
+						local picker = action_state.get_current_picker(prompt_bufnr)
+						local selection = picker:get_multi_selection()
+						for _, entry in ipairs(selection) do
+							vim.api.nvim_buf_delete(entry.bufnr, { force = true })
+						end
+						refresh_buffer_searcher()
+					end
+					map("n", "dd", delete_buf)
+					map("n", "<C-d>", delete_multiple_buf)
+					map("i", "<C-d>", delete_multiple_buf)
+					return true
+				end,
+			})
+		end
+
 		-- set keymaps
 		local keymap = vim.keymap -- for conciseness
 
+		keymap.set("n", "<leader>fb", buffer_searcher, { desc = "Fuzzy find buffers" })
 		keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>", { desc = "Fuzzy find files in cwd" })
 		keymap.set("n", "<leader>fr", "<cmd>Telescope oldfiles<cr>", { desc = "Fuzzy find recent files" })
 		keymap.set("n", "<leader>fs", "<cmd>Telescope live_grep<cr>", { desc = "Find string in cwd" })
