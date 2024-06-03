@@ -10,6 +10,9 @@ return {
 		vim.g.loaded_netrwPlugin = 1
 
 		nvimtree.setup({
+			trash = {
+				cmd = "trash",
+			},
 			view = {
 				width = 35,
 				relativenumber = true,
