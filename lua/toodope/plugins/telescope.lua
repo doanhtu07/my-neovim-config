@@ -65,6 +65,17 @@ return {
 					},
 				},
 			},
+			-- For plugin telescope media files to work
+			-- https://github.com/nvim-telescope/telescope-media-files.nvim?tab=readme-ov-file
+			extensions = {
+				media_files = {
+					-- filetypes whitelist
+					-- defaults to {"png", "jpg", "mp4", "webm", "pdf"}
+					filetypes = { "png", "jpg", "mp4", "webm", "pdf", "svg" },
+					-- find command (defaults to `fd`)
+					-- find_cmd = "rg",
+				},
+			},
 		})
 
 		telescope.load_extension("fzf")
