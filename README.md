@@ -33,3 +33,7 @@ To know whether a plugin depends on something from your environment, check that 
 [Notion Link](https://tudope.notion.site/My-Tmux-Cheatsheet-7db1608941d94a539b18546e578f0fef?pvs=4)
 
 **NOTE**: This cheatsheet depends entirely on my tmux settings, so be cautious when using it
+
+## My Yazi Cheatsheet
+
+[Notion Link](https://tudope.notion.site/My-Yazi-Cheatsheet-ec2876c5fdee4ab78ae8dc022454f828?pvs=4)
