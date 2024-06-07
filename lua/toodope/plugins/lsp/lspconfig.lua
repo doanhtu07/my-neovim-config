@@ -90,7 +90,9 @@ return {
 				-- https://github.com/neovim/nvim-lspconfig/blob/master/lua/lspconfig/server_configurations/eslint.lua
 				lspconfig.eslint.setup({
 					--- ...
-					useFlatConfig = true,
+					experimental = {
+						useFlatConfig = true,
+					},
 					on_attach = function(client, bufnr)
 						vim.api.nvim_create_autocmd("BufWritePre", {
 							group = vim.api.nvim_create_augroup("EslintLspFixAfterWrite", {}),
