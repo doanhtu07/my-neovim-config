@@ -60,6 +60,7 @@ return {
 						color = { bg = colors.inactive_bg },
 						separator = { right = "", left = "" },
 					},
+					{ "diagnostics" },
 				},
 
 				lualine_c = {
