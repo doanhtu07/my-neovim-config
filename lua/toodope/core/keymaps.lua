@@ -18,6 +18,10 @@ keymap.set("n", "<leader>sv", "<C-w>v", { desc = "Split window vertically" })
 keymap.set("n", "<leader>sh", "<C-w>s", { desc = "Split window horizontally" })
 keymap.set("n", "<leader>se", "<C-w>=", { desc = "Make splits equal size" })
 keymap.set("n", "<leader>sx", "<cmd>close<CR>", { desc = "Close current split" })
+keymap.set("n", "<leader>s=", "<C-w>5+", { desc = "Increase window height" })
+keymap.set("n", "<leader>s-", "<C-w>5-", { desc = "Decrease window height" })
+keymap.set("n", "<leader>s>", "<C-w>10>", { desc = "Increase window width" })
+keymap.set("n", "<leader>s<", "<C-w>10<", { desc = "Decrease window width" })
 
 -- tab management
 keymap.set("n", "<leader>to", "<cmd>tabnew<CR>", { desc = "Open new tab" }) -- open new tab
