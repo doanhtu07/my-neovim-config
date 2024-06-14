@@ -21,6 +21,7 @@ return {
 						["<C-k>"] = actions.move_selection_previous, -- move to prev result
 						["<C-j>"] = actions.move_selection_next, -- move to next result
 						["<C-q>"] = actions.send_selected_to_qflist + actions.open_qflist,
+						["<C-s>"] = actions.toggle_all,
 					},
 				},
 				-- https://stackoverflow.com/questions/71809098/how-to-include-specific-hidden-file-folder-in-search-result-when-using-telescope
@@ -63,6 +64,9 @@ return {
 						"--glob=!**/yarn.lock",
 						"--glob=!**/package-lock.json",
 					},
+				},
+				oldfiles = {
+					cwd_only = true,
 				},
 			},
 			-- For plugin telescope media files to work

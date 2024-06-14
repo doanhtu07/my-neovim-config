@@ -13,6 +13,7 @@ return {
 				svelte = { "prettier" },
 				css = { "prettier" },
 				html = { "prettier" },
+				svg = { "prettier" }, -- https://github.com/prettier/prettier/issues/5322
 				json = { "prettier" },
 				yaml = { "prettier" },
 				markdown = { "prettier" },
