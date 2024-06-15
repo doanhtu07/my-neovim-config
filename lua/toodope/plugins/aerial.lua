@@ -1,5 +1,5 @@
 return {
-	"stevearc/aerial.nvim",
+	"stevearc/aerial.nvim", -- Plugin to see the symbols in a file
 	config = function()
 		require("aerial").setup({
 			backends = { "lsp", "treesitter", "markdown", "asciidoc", "man" },

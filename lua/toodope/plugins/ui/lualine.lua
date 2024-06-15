@@ -51,7 +51,8 @@ return {
 
 		lualine.setup({
 			options = {
-				theme = my_lualine_theme,
+				-- theme = my_lualine_theme,
+				theme = "tokyonight",
 			},
 			sections = {
 				lualine_b = {
