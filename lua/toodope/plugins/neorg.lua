@@ -28,6 +28,8 @@ return {
 						},
 					},
 					["core.integrations.nvim-cmp"] = {},
+
+					["core.summary"] = {},
 				},
 			})
 		end,
