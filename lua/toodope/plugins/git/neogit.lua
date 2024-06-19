@@ -12,8 +12,12 @@ return {
 			disable_line_numbers = false,
 		})
 
-		vim.keymap.set("n", "<leader>lg", function()
+		vim.keymap.set("n", "<leader>ng", function()
 			neogit.open()
-		end)
+		end, { desc = "Open Neogit" })
+
+		vim.keymap.set("n", "<leader>nd", function()
+			require("diffview").open({})
+		end, { desc = "Diff view git" })
 	end,
 }
