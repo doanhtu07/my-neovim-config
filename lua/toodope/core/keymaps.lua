@@ -35,6 +35,11 @@ keymap.set("n", "<leader>tf", "<cmd>tabnew %<CR>", { desc = "Open current buffer
 -- https://github.com/nvim-neorg/neorg/discussions/1066
 vim.opt.conceallevel = 3
 vim.keymap.set("n", "<leader>nt", function()
+	local filetype = vim.filetype.match({ buf = 0 })
+	if filetype == "norg" then
+		vim.cmd.Neorg("toggle-concealer")
+	end
+
 	vim.schedule(function()
 		if vim.opt.conceallevel:get() == 3 then
 			vim.opt.conceallevel = 0
@@ -42,5 +47,4 @@ vim.keymap.set("n", "<leader>nt", function()
 			vim.opt.conceallevel = 3
 		end
 	end)
-	vim.cmd.Neorg("toggle-concealer")
 end, { desc = "Toggle Neorg concealer" })
