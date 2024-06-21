@@ -113,7 +113,7 @@ return {
 						useFlatConfig = true,
 					},
 					on_attach = function(client, bufnr)
-						vim.api.nvim_create_autocmd("BufWritePre", {
+						vim.api.nvim_create_autocmd("BufWritePost", {
 							group = vim.api.nvim_create_augroup("EslintLspFixAfterWrite", {}),
 							pattern = { "javascript", "javascriptreact", "typescript", "typescriptreact" },
 							command = "EslintFixAll",

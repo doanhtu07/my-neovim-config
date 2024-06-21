@@ -12,18 +12,5 @@ return {
 	config = function()
 		local whichkey = require("which-key")
 		whichkey.setup({})
-
-		-- this is to fix bug: https://github.com/folke/which-key.nvim/issues/476
-		-- https://github.com/folke/which-key.nvim/issues/476
-		vim.api.nvim_create_autocmd("FileType", {
-			desc = "Set up neorg Which-Key descriptions",
-			group = vim.api.nvim_create_augroup("neorg_mapping_descriptions", { clear = true }),
-			pattern = "norg",
-			callback = function()
-				vim.keymap.set("n", "<localleader>", function()
-					whichkey.show("\\")
-				end, { buffer = true })
-			end,
-		})
 	end,
 }

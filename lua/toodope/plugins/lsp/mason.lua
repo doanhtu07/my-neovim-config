@@ -38,7 +38,7 @@ return {
 				"emmet_ls",
 				"prismals",
 				"pyright",
-				"marksman",
+				"marksman", -- for markdown language server (with local doc link...)
 			},
 		})
 

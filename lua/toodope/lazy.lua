@@ -24,6 +24,7 @@ require("lazy").setup({
 	{ import = "toodope.plugins.git" },
 	{ import = "toodope.plugins.lintformat" },
 	{ import = "toodope.plugins.lsp" },
+	{ import = "toodope.plugins.markdown" },
 	{ import = "toodope.plugins.telescope" },
 	{ import = "toodope.plugins.ui" },
 }, {
