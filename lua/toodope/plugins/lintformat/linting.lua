@@ -13,7 +13,7 @@ return {
 			python = { "pylint" },
 		}
 
-		local lint_augroup = vim.api.nvim_create_augroup("lint", { clear = true })
+		local lint_augroup = vim.api.nvim_create_augroup("RunLinter", { clear = true })
 
 		vim.api.nvim_create_autocmd({ "BufEnter", "BufWritePost", "InsertLeave" }, {
 			group = lint_augroup,
