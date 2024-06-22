@@ -18,6 +18,6 @@ return {
 		})
 
 		vim.keymap.set("n", "<leader>mi", "<cmd>MDInsertToc<cr>", { desc = "Insert table of contents (markdown)" })
-		vim.keymap.set("n", "<leader>mt", "<cmd>MDToc<cr>", { desc = "Open table of contents (markdown)" })
+		vim.keymap.set("n", "<leader>mo", "<cmd>MDToc<cr>", { desc = "Open table of contents (markdown)" })
 	end,
 }
