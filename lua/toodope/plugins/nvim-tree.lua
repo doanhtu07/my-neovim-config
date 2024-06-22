@@ -13,7 +13,7 @@ return {
 
 		-- https://github.com/MarioCarrion/videos/blob/269956e913b76e6bb4ed790e4b5d25255cb1db4f/2023/01/nvim/lua/plugins/nvim-tree.lua
 		local HEIGHT_RATIO = 0.8 -- You can change this
-		local WIDTH_RATIO = 0.5 -- You can change this too
+		local WIDTH_RATIO = 0.7 -- You can change this too
 
 		-- recommended settings from nvim-tree documentation
 		vim.g.loaded_netrw = 1
