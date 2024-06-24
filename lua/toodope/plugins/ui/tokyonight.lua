@@ -18,6 +18,43 @@ return {
 					fg = colors.orange,
 					bold = true,
 				}
+
+				-- Customize telescope color
+				hl.TelescopePromptPrefix = {
+					bg = colors.bg,
+				}
+				hl.TelescopePromptNormal = {
+					bg = colors.bg,
+				}
+				hl.TelescopeResultsNormal = {
+					bg = colors.bg,
+				}
+				hl.TelescopePreviewNormal = {
+					bg = colors.bg,
+				}
+				hl.TelescopePromptBorder = {
+					bg = colors.bg,
+					fg = colors.bg,
+				}
+				hl.TelescopeResultsBorder = {
+					bg = colors.bg,
+					fg = colors.bg,
+				}
+				hl.TelescopePreviewBorder = {
+					bg = colors.bg,
+					fg = colors.bg,
+				}
+				hl.TelescopePromptTitle = {
+					bg = colors.orange,
+					fg = colors.bg,
+				}
+				hl.TelescopeResultsTitle = {
+					fg = colors.bg,
+				}
+				hl.TelescopePreviewTitle = {
+					bg = colors.blue,
+					fg = colors.bg,
+				}
 			end,
 		})
 

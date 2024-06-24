@@ -13,8 +13,36 @@ return {
 		local builtin = require("telescope.builtin")
 		local action_state = require("telescope.actions.state")
 
+		-- https://github.com/nvim-telescope/telescope.nvim/issues/2657
+		local layout_strategies = require("telescope.pickers.layout_strategies")
+		layout_strategies.dynamic = function(self, max_columns, max_lines, layout_config)
+			if vim.o.columns > 120 then
+				return layout_strategies.horizontal(self, max_columns, max_lines, layout_config)
+			else
+				return layout_strategies.vertical(self, max_columns, max_lines, layout_config)
+			end
+		end
+
 		telescope.setup({
 			defaults = {
+				-- https://yeripratama.com/blog/customizing-nvim-telescope/
+				-- Customize looks - Theme
+				layout_strategy = "dynamic",
+				layout_config = {
+					horizontal = {
+						prompt_position = "top",
+						width = { padding = 0 },
+						height = { padding = 0 },
+						preview_width = 0.5,
+					},
+					vertical = {
+						prompt_position = "top",
+						width = { padding = 0 },
+						height = { padding = 0 },
+					},
+				},
+				sorting_strategy = "ascending",
+
 				path_display = { "truncate" },
 				mappings = {
 					i = {
