@@ -43,7 +43,12 @@ return {
 				},
 				sorting_strategy = "ascending",
 
-				path_display = { "truncate" },
+				path_display = {
+					shorten = {
+						len = 1,
+						exclude = { 1, -2, -1 },
+					},
+				},
 				mappings = {
 					i = {
 						["<C-k>"] = actions.move_selection_previous, -- move to prev result
