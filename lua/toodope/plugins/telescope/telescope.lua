@@ -112,10 +112,14 @@ return {
 					-- find command (defaults to `fd`)
 					-- find_cmd = "rg",
 				},
+				persisted = {
+					-- layout_config = { width = 0.55, height = 0.55 },
+				},
 			},
 		})
 
 		telescope.load_extension("fzf")
+		telescope.load_extension("persisted")
 
 		-- https://medium.com/@jogarcia/delete-buffers-on-telescope-21cc4cf61b63
 		local buffer_searcher
