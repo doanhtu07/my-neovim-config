@@ -22,18 +22,6 @@ Here are some of the dependencies that live outside of Neovim ecosystem:
 
 To know whether a plugin depends on something from your environment, check that plugin Github page and documentation.
 
-## My Neovim Cheatsheet
+## My main dotfiles repository
 
-[Notion Link](https://tudope.notion.site/My-Neovim-Cheatsheet-1237d333b6a5475dadeee5996e6cfe07?pvs=4)
-
-**NOTE**: This cheatsheet depends entirely on my keymaps, so be cautious when using it
-
-## My Tmux Cheatsheet
-
-[Notion Link](https://tudope.notion.site/My-Tmux-Cheatsheet-7db1608941d94a539b18546e578f0fef?pvs=4)
-
-**NOTE**: This cheatsheet depends entirely on my tmux settings, so be cautious when using it
-
-## My Yazi Cheatsheet
-
-[Notion Link](https://tudope.notion.site/My-Yazi-Cheatsheet-ec2876c5fdee4ab78ae8dc022454f828?pvs=4)
+[Dotfiles Github link](https://github.com/doanhtu07/my-terminal-dotfiles)
