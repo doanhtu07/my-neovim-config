@@ -18,7 +18,7 @@ return {
 			return vim.fn["codeium#Clear"]()
 		end, { expr = true, silent = true })
 
-		vim.keymap.set("i", "<M-h>", function()
+		vim.keymap.set("i", "<M-tab>", function()
 			return vim.fn["codeium#Accept"]()
 		end, { expr = true, silent = true })
 
