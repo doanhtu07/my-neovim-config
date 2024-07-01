@@ -100,9 +100,11 @@ return {
 		mason_lspconfig.setup_handlers({
 			-- default handler for installed servers
 			function(server_name)
-				lspconfig[server_name].setup({
-					capabilities = capabilities,
-				})
+				if server_name ~= "jdtls" then
+					lspconfig[server_name].setup({
+						capabilities = capabilities,
+					})
+				end
 			end,
 			["eslint"] = function()
 				-- https://www.reddit.com/r/neovim/comments/1aiphg8/which_is_better_nonels_or_nvimlint_conform/
@@ -119,6 +121,21 @@ return {
 							command = "EslintFixAll",
 						})
 					end,
+				})
+			end,
+			["tailwindcss"] = function()
+				lspconfig["tailwindcss"].setup({
+					capabilities = capabilities,
+					filetypes = {
+						"html",
+						"typescriptreact",
+						"javascriptreact",
+						"css",
+						"sass",
+						"scss",
+						"less",
+						"svelte",
+					},
 				})
 			end,
 			["svelte"] = function()
@@ -174,6 +191,12 @@ return {
 							},
 						},
 					},
+				})
+			end,
+			["marksman"] = function()
+				lspconfig["marksman"].setup({
+					capabilities = capabilities,
+					filetypes = { "markdown" },
 				})
 			end,
 		})

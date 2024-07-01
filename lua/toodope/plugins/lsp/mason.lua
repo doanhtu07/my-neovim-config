@@ -39,6 +39,8 @@ return {
 				"prismals",
 				"pyright",
 				"marksman", -- for markdown language server (with local doc link...)
+				"jdtls", -- for java language server
+				"lemminx", -- for xml language server
 			},
 		})
 
@@ -48,8 +50,11 @@ return {
 				"stylua", -- lua formatter
 				"isort", -- python formatter
 				"black", -- python formatter
-				-- "pylint",
-				-- "eslint_d",
+
+				-- Java tools
+				"java-debug-adapter",
+				"java-test",
+				"google-java-format",
 			},
 		})
 	end,
