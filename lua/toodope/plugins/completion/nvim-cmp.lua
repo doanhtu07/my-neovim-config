@@ -25,10 +25,31 @@ return {
 		-- loads vscode style snippets from installed plugins (e.g. friendly-snippets)
 		require("luasnip.loaders.from_vscode").lazy_load()
 
+		local border = {
+			{ "╭", "CmpBorder" },
+			{ "─", "CmpBorder" },
+			{ "╮", "CmpBorder" },
+			{ "│", "CmpBorder" },
+			{ "╯", "CmpBorder" },
+			{ "─", "CmpBorder" },
+			{ "╰", "CmpBorder" },
+			{ "│", "CmpBorder" },
+		}
+
 		cmp.setup({
+			window = {
+				documentation = {
+					border = border,
+				},
+				completion = {
+					border = border,
+				},
+			},
+
 			completion = {
 				completeopt = "menu,menuone,preview,noselect",
 			},
+
 			snippet = { -- configure how nvim-cmp interacts with snippet engine
 				expand = function(args)
 					luasnip.lsp_expand(args.body)
@@ -56,6 +77,14 @@ return {
 				format = lspkind.cmp_format({
 					maxwidth = 50,
 					ellipsis_char = "...",
+					show_labelDetails = true,
+					mode = "symbol_text",
+					menu = {
+						nvim_lsp = "[LSP]",
+						luasnip = "[LuaSnip]",
+						buffer = "[Buffer]",
+						path = "[Path]",
+					},
 				}),
 			},
 		})

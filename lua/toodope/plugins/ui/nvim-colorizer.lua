@@ -9,6 +9,9 @@ return {
 			css = {
 				css = true,
 			},
+			html = {
+				css = true,
+			},
 		})
 	end,
 }

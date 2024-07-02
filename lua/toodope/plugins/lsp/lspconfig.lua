@@ -75,21 +75,23 @@ return {
 		})
 
 		local border = {
-			{ "🭽", "FloatBorder" },
-			{ "▔", "FloatBorder" },
-			{ "🭾", "FloatBorder" },
-			{ "▕", "FloatBorder" },
-			{ "🭿", "FloatBorder" },
-			{ "▁", "FloatBorder" },
-			{ "🭼", "FloatBorder" },
-			{ "▏", "FloatBorder" },
+			{ "╭", "FloatBorder" },
+			{ "─", "FloatBorder" },
+			{ "╮", "FloatBorder" },
+			{ "│", "FloatBorder" },
+			{ "╯", "FloatBorder" },
+			{ "─", "FloatBorder" },
+			{ "╰", "FloatBorder" },
+			{ "│", "FloatBorder" },
 		}
 
-		-- LSP settings (for overriding per client)
-		local handlers = {
-			["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, { border = border }),
-			["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, { border = border }),
-		}
+		-- Override LSP floating preview border globally
+		local orig_util_open_floating_preview = vim.lsp.util.open_floating_preview
+		function vim.lsp.util.open_floating_preview(contents, syntax, opts, ...)
+			opts = opts or {}
+			opts.border = opts.border or border
+			return orig_util_open_floating_preview(contents, syntax, opts, ...)
+		end
 
 		-- used to enable autocompletion (assign to every lsp server config)
 		local capabilities = cmp_nvim_lsp.default_capabilities(vim.lsp.protocol.make_client_capabilities())
@@ -99,6 +101,9 @@ return {
 			dynamicRegistration = false,
 			lineFoldingOnly = true,
 		}
+
+		-- saw this setting in emmet_ls docs
+		capabilities.textDocument.completion.completionItem.snippetSupport = true
 
 		-- Change the Diagnostic symbols in the sign column (gutter)
 		-- (not in youtube nvim video)
@@ -122,7 +127,6 @@ return {
 				if server_name ~= "jdtls" then
 					lspconfig[server_name].setup({
 						capabilities = capabilities,
-						handlers = handlers,
 					})
 				end
 			end,
@@ -131,7 +135,6 @@ return {
 				-- https://github.com/neovim/nvim-lspconfig/blob/master/lua/lspconfig/server_configurations/eslint.lua
 				lspconfig.eslint.setup({
 					--- ...
-					handlers = handlers,
 					experimental = {
 						useFlatConfig = true,
 					},
@@ -146,7 +149,6 @@ return {
 			end,
 			["tailwindcss"] = function()
 				lspconfig["tailwindcss"].setup({
-					handlers = handlers,
 					capabilities = capabilities,
 					filetypes = {
 						"html",
@@ -160,7 +162,6 @@ return {
 			["svelte"] = function()
 				-- configure svelte server
 				lspconfig["svelte"].setup({
-					handlers = handlers,
 					capabilities = capabilities,
 					on_attach = function(client, bufnr)
 						vim.api.nvim_create_autocmd("BufWritePost", {
@@ -176,7 +177,6 @@ return {
 			["graphql"] = function()
 				-- configure graphql language server
 				lspconfig["graphql"].setup({
-					handlers = handlers,
 					capabilities = capabilities,
 					filetypes = { "graphql", "gql", "svelte", "typescriptreact", "javascriptreact" },
 				})
@@ -184,7 +184,6 @@ return {
 			["emmet_ls"] = function()
 				-- configure emmet language server
 				lspconfig["emmet_ls"].setup({
-					handlers = handlers,
 					capabilities = capabilities,
 					filetypes = {
 						"html",
@@ -201,7 +200,6 @@ return {
 			["lua_ls"] = function()
 				-- configure lua server (with special settings)
 				lspconfig["lua_ls"].setup({
-					handlers = handlers,
 					capabilities = capabilities,
 					settings = {
 						Lua = {
@@ -218,7 +216,6 @@ return {
 			end,
 			["marksman"] = function()
 				lspconfig["marksman"].setup({
-					handlers = handlers,
 					capabilities = capabilities,
 					filetypes = { "markdown" },
 				})
