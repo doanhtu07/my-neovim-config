@@ -21,6 +21,7 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
 	{ import = "toodope.plugins" }, -- init.lua
 	{ import = "toodope.plugins.completion" },
+	{ import = "toodope.plugins.filetree" },
 	{ import = "toodope.plugins.git" },
 	{ import = "toodope.plugins.lintformat" },
 	{ import = "toodope.plugins.lsp" },
