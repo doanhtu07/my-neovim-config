@@ -4,6 +4,11 @@ return {
 	config = function()
 		-- https://www.youtube.com/watch?v=q1QhV-24DNA&list=PLOIdWGSU_Wcp9_w8euHJaux8DEIBCvYGc&index=10
 		require("oil").setup({
+			keymaps = {
+				["<C-h>"] = false,
+				["<C-l>"] = false,
+				["<leader>or"] = "actions.refresh",
+			},
 			default_file_explorer = true,
 			delete_to_trash = true,
 			view_options = {
@@ -14,6 +19,6 @@ return {
 				wrap = true,
 			},
 		})
-		vim.keymap.set("n", "<leader>o", "<cmd>Oil<cr>", { desc = "Open Oil at parent directory" })
+		vim.keymap.set("n", "<leader>of", "<cmd>Oil<cr>", { desc = "Open Oil at parent directory" })
 	end,
 }
