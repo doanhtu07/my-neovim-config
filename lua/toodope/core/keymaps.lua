@@ -39,5 +39,6 @@ vim.keymap.set("n", "<leader>nt", function()
 		elseif vim.opt.conceallevel:get() == 0 then
 			vim.opt.conceallevel = 3
 		end
+		require("render-markdown").toggle()
 	end)
 end, { desc = "Toggle concealer" })
