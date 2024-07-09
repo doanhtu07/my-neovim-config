@@ -7,7 +7,7 @@ return {
 			-- foldfunc = "builtin",
 			-- setopt = true,
 			setopt = true,
-			relculright = true,
+			relculright = false, -- whether to right-align the relative line number
 			segments = {
 				-- https://github.com/luukvbaal/statuscol.nvim/blob/main/lua/statuscol.lua
 				-- _G.ScFa = get_fold_action
