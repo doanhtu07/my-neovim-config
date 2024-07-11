@@ -22,6 +22,7 @@ require("lazy").setup({
 	{ import = "toodope.plugins" }, -- init.lua
 	{ import = "toodope.plugins.completion" },
 	{ import = "toodope.plugins.filetree" },
+	{ import = "toodope.plugins.fun" },
 	{ import = "toodope.plugins.git" },
 	{ import = "toodope.plugins.lintformat" },
 	{ import = "toodope.plugins.lsp" },
