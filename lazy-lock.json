@@ -34,7 +34,7 @@
   "mini.diff": { "branch": "main", "commit": "d58f9cb13400aedc5b5a0ef70fcdf31871ba2ee6" },
   "neogit": { "branch": "master", "commit": "4fb60b903e8a01c9dfd3a59f56292dae667b8339" },
   "nvim-autopairs": { "branch": "master", "commit": "78a4507bb9ffc9b00f11ae0ac48243d00cb9194d" },
-  "nvim-cmp": { "branch": "main", "commit": "7e348da6e5085ac447144a2ef4b637220ba27209" },
+  "nvim-cmp": { "branch": "main", "commit": "e1757aea6145d14208f3035f6b56c99e36593799" },
   "nvim-colorizer.lua": { "branch": "master", "commit": "a065833f35a3a7cc3ef137ac88b5381da2ba302e" },
   "nvim-jdtls": { "branch": "master", "commit": "6bfd1591583b02e742fc3a2f43393c4ea3b6d3c7" },
   "nvim-lint": { "branch": "master", "commit": "efc6fc83f0772283e064c53a8f9fb5645bde0bc0" },
