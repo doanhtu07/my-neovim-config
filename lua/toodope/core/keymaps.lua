@@ -31,6 +31,15 @@ keymap.set("n", "<leader>tn", "<cmd>tabn<CR>", { desc = "Go to next tab" }) --  
 keymap.set("n", "<leader>tp", "<cmd>tabp<CR>", { desc = "Go to previous tab" }) --  go to previous tab
 keymap.set("n", "<leader>tf", "<cmd>tabnew %<CR>", { desc = "Open current buffer in new tab" }) --  move current buffer to new tab
 
+-- text wrap
+keymap.set("n", "<leader>tw", function()
+	if vim.opt.wrap:get() == true then
+		vim.opt.wrap = false
+	else
+		vim.opt.wrap = true
+	end
+end, { desc = "Toggle text wrap" })
+
 vim.opt.conceallevel = 0
 vim.keymap.set("n", "<leader>nt", function()
 	vim.schedule(function()
