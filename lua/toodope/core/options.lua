@@ -6,7 +6,7 @@ vim.cmd("let g:netrw_liststyle = 3")
 local opt = vim.opt
 
 -- Number of screen lines to show around the cursor
-opt.scrolloff = 10
+-- opt.scrolloff = 10
 
 -- Use relative number in Neovim
 opt.relativenumber = true
