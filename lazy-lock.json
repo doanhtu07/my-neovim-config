@@ -18,7 +18,7 @@
   "distant.nvim": { "branch": "v0.3", "commit": "823267cf3b77cf9a7ae28454926eabc18fec1ba0" },
   "dressing.nvim": { "branch": "master", "commit": "6741f1062d3dc6e4755367a7e9b347b553623f04" },
   "flutter-tools.nvim": { "branch": "main", "commit": "5aa227fa083fd740184b55b5220dfabc24a25cc7" },
-  "friendly-snippets": { "branch": "main", "commit": "45a1b96e46efe5fce8af325d4bed45feb9d29d0f" },
+  "friendly-snippets": { "branch": "main", "commit": "00ebcaa159e817150bd83bfe2d51fa3b3377d5c4" },
   "harpoon": { "branch": "harpoon2", "commit": "0378a6c428a0bed6a2781d459d7943843f374bce" },
   "indent-blankline.nvim": { "branch": "master", "commit": "65e20ab94a26d0e14acac5049b8641336819dfc7" },
   "lazy.nvim": { "branch": "main", "commit": "b02c9eae6a250f98908c146d1dc1a891f5019f0a" },
@@ -61,5 +61,5 @@
   "todo-comments.nvim": { "branch": "main", "commit": "d61567557e2ff5c548c74e96b2d9f8d33e5fcb34" },
   "vim-maximizer": { "branch": "master", "commit": "2e54952fe91e140a2e69f35f22131219fcd9c5f1" },
   "vim-tmux-navigator": { "branch": "master", "commit": "5b3c701686fb4e6629c100ed32e827edf8dad01e" },
-  "which-key.nvim": { "branch": "main", "commit": "d36f722f114dfdafc8098496e9b5dcbd9f8fc3e8" }
+  "which-key.nvim": { "branch": "main", "commit": "f0e99d48f33193526fe66e699174670d5856b6b8" }
 }
