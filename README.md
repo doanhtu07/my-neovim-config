@@ -28,3 +28,4 @@ To know whether a plugin depends on something from your environment, check that 
 
 - **Jedi Language Server**
   - https://www.reddit.com/r/neovim/comments/1603eif/adding_extra_paths_to_jedilanguageserver/
+  - https://github.com/pappasam/jedi-language-server/issues/199
