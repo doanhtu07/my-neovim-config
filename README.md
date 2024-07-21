@@ -23,3 +23,8 @@ To know whether a plugin depends on something from your environment, check that 
 ## My main dotfiles repository
 
 [Dotfiles Github link](https://github.com/doanhtu07/my-terminal-dotfiles)
+
+## Extra notes
+
+- **Jedi Language Server**
+  - https://www.reddit.com/r/neovim/comments/1603eif/adding_extra_paths_to_jedilanguageserver/

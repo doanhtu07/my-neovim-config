@@ -37,10 +37,10 @@ return {
 				"graphql",
 				"emmet_ls",
 				"prismals",
-				"pyright",
 				"marksman", -- for markdown language server (with local doc link...)
 				"jdtls", -- for java language server
 				"lemminx", -- for xml language server
+				"jedi_language_server", -- for python language server
 			},
 		})
 
