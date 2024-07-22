@@ -8,11 +8,12 @@ return {
 		tokyonight.setup({
 			style = "night",
 			on_highlights = function(hl, colors)
+				-- Customize line number color
 				hl.LineNrAbove = {
-					fg = colors.blue,
+					fg = colors.dark5,
 				}
 				hl.LineNrBelow = {
-					fg = colors.cyan,
+					fg = colors.dark5,
 				}
 				hl.CursorLineNr = {
 					fg = colors.orange,
@@ -55,6 +56,11 @@ return {
 					bg = colors.blue,
 					fg = colors.bg,
 				}
+
+				-- Gitsigns
+				hl.GitSignsAdd = { fg = colors.green2 } -- diff mode: Added line |diff.txt|
+				hl.GitSignsChange = { fg = colors.orange } -- diff mode: Changed line |diff.txt|
+				hl.GitSignsDelete = { fg = colors.red } -- diff mode: Deleted line |diff.txt|
 			end,
 		})
 
