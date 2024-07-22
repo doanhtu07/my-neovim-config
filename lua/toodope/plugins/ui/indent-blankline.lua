@@ -5,6 +5,6 @@ return {
 	opts = {
 		-- Note: For the underline of scope, it depends on terminal font settings
 		-- WezTerm has underline-thickness setting
-		indent = { char = "┆" },
+		indent = { char = "╎" },
 	},
 }
