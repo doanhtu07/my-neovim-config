@@ -33,18 +33,18 @@ return {
 				hl.TelescopePreviewNormal = {
 					bg = colors.bg,
 				}
-				hl.TelescopePromptBorder = {
-					bg = colors.bg,
-					fg = colors.bg,
-				}
-				hl.TelescopeResultsBorder = {
-					bg = colors.bg,
-					fg = colors.bg,
-				}
-				hl.TelescopePreviewBorder = {
-					bg = colors.bg,
-					fg = colors.bg,
-				}
+				-- hl.TelescopePromptBorder = {
+				-- 	bg = colors.bg,
+				-- 	fg = colors.bg,
+				-- }
+				-- hl.TelescopeResultsBorder = {
+				-- 	bg = colors.bg,
+				-- 	fg = colors.bg,
+				-- }
+				-- hl.TelescopePreviewBorder = {
+				-- 	bg = colors.bg,
+				-- 	fg = colors.bg,
+				-- }
 				hl.TelescopePromptTitle = {
 					bg = colors.orange,
 					fg = colors.bg,
