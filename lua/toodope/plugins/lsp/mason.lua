@@ -57,10 +57,11 @@ return {
 
 		-- https://www.youtube.com/watch?v=lsFoZIg-oDs
 		mason_nvim_dap.setup({
+			automatic_installation = false,
 			handlers = {},
 			ensure_installed = {
-				"java-test", -- Java test runner
-				"java-debug-adapter", -- Java debugger
+				"javatest", -- java-test (Java test runner)
+				"javadbg", -- java-debug-adapter (Java debugger)
 				"codelldb", -- C/C++ debugger
 			},
 		})
