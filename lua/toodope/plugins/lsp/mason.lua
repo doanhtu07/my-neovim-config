@@ -51,6 +51,7 @@ return {
 				"stylua", -- lua formatter
 				"isort", -- python formatter
 				"black", -- python formatter
+				"pylint", -- python linter
 				"google-java-format", -- java formatter
 			},
 		})
