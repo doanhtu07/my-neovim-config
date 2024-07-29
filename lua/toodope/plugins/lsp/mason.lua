@@ -42,6 +42,9 @@ return {
 				"lemminx", -- for xml language server
 				"jedi_language_server", -- for python language server
 				"clangd", -- for c, c++ language server
+
+				"docker_compose_language_service", -- for docker-compose
+				"dockerls", -- for dockerfile
 			},
 		})
 
