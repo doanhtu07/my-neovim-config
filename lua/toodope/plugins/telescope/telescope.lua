@@ -1,6 +1,7 @@
 return {
 	"nvim-telescope/telescope.nvim",
-	branch = "0.1.x",
+	-- branch = "0.1.x",
+	branch = "master",
 	dependencies = {
 		"nvim-lua/plenary.nvim",
 		{ "nvim-telescope/telescope-fzf-native.nvim", build = "make" }, -- improve sorting performance of telescope
@@ -44,9 +45,12 @@ return {
 				sorting_strategy = "ascending",
 
 				path_display = {
-					shorten = {
-						len = 1,
-						exclude = { 1, -2, -1 },
+					-- shorten = {
+					-- 	len = 1,
+					-- 	exclude = { 1, 2, -3, -2, -1 },
+					-- },
+					filename_first = {
+						reverse_directories = true,
 					},
 				},
 				mappings = {
@@ -161,7 +165,8 @@ return {
 		local keymap = vim.keymap -- for conciseness
 
 		keymap.set("n", "<leader>fb", buffer_searcher, { desc = "Fuzzy find buffers" })
-		keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>", { desc = "Fuzzy find files in cwd" })
+		-- keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>", { desc = "Fuzzy find files in cwd" })
+		keymap.set("n", "<leader>ff", "<cmd>Telescope frecency<cr>", { desc = "Fuzzy find files in cwd with scores" })
 		keymap.set("n", "<leader>fr", "<cmd>Telescope oldfiles<cr>", { desc = "Fuzzy find recent files" })
 		keymap.set("n", "<leader>fs", "<cmd>Telescope live_grep<cr>", { desc = "Find string in cwd" })
 		keymap.set("n", "<leader>fc", "<cmd>Telescope grep_string<cr>", { desc = "Find string under cursor in cwd" })
