@@ -58,6 +58,7 @@ return {
 				"black", -- python formatter
 				-- "pylint", -- python linter, install in environment we want instead: https://github.com/williamboman/mason.nvim/issues/1336
 				"google-java-format", -- java formatter
+				"cmakelang", -- cmake formatter and linter
 			},
 		})
 
