@@ -45,6 +45,8 @@ return {
 
 				"docker_compose_language_service", -- for docker-compose
 				"dockerls", -- for dockerfile
+
+				"cmake", -- for cmake
 			},
 		})
 
