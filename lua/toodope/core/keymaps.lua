@@ -31,6 +31,10 @@ keymap.set("n", "<leader>tf", "<cmd>tabnew %<CR>", { desc = "Open current buffer
 keymap.set("n", "L", "<cmd>tabn<CR>", { desc = "Go to next tab" }) --  go to next tab
 keymap.set("n", "H", "<cmd>tabp<CR>", { desc = "Go to previous tab" }) --  go to previous tab
 
+-- indent and re-select
+keymap.set("x", "<", "<gv", { desc = "Indent left" })
+keymap.set("x", ">", ">gv", { desc = "Indent right" })
+
 -- text wrap
 keymap.set("n", "<leader>tw", function()
 	if vim.opt.wrap:get() == true then
