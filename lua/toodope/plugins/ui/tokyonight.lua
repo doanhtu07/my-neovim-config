@@ -6,7 +6,7 @@ return {
 
 		-- https://github.com/folke/tokyonight.nvim/blob/main/extras/lua/tokyonight_night.lua
 		tokyonight.setup({
-			style = "night",
+			style = "moon",
 			on_highlights = function(hl, colors)
 				-- Customize line number color
 				hl.LineNrAbove = {
