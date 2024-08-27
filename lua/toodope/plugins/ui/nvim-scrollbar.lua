@@ -1,8 +1,8 @@
 return {
 	"petertriho/nvim-scrollbar",
 	config = function()
-		-- local colors = require("catppuccin.palettes").get_palette("mocha")
-		local colors = require("tokyonight.colors").setup()
+		local colors = require("catppuccin.palettes").get_palette("mocha")
+		-- local colors = require("tokyonight.colors").setup()
 
 		require("scrollbar").setup({
 			handle = {
