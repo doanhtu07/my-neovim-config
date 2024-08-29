@@ -29,3 +29,64 @@ To know whether a plugin depends on something from your environment, check that 
 - **Jedi Language Server**
   - https://www.reddit.com/r/neovim/comments/1603eif/adding_extra_paths_to_jedilanguageserver/
   - https://github.com/pappasam/jedi-language-server/issues/199
+
+## Quick use
+
+### Linux
+
+---
+
+Install homebrew to install neovim v10
+
+```
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
+Run these two commands in your terminal to add Homebrew to your PATH:
+
+```
+(echo; echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"') >> /root/.bashrc
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+```
+
+- Install Homebrew's dependencies if you have sudo access:
+
+```
+sudo apt-get install build-essential
+```
+
+- We recommend that you install GCC:
+
+```
+brew install gcc
+```
+
+Install Neovim
+
+```
+brew install neovim
+```
+
+Install some stuff for Mason
+
+```
+brew install npm
+brew install unzip
+brew install curl
+brew install tar
+brew install gzip
+```
+
+---
+
+Setup config
+
+```
+mkdir -p ~/.config/nvim
+
+cd ~/.config/nvim
+
+git clone https://github.com/doanhtu07/my-neovim-config.git .
+```
+
+---
