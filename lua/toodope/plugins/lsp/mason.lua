@@ -39,7 +39,6 @@ return {
 				"lua_ls",
 				"marksman", -- for markdown language server (with local doc link...)
 				"jdtls", -- for java language server
-				"lemminx", -- for xml language server
 				"jedi_language_server", -- for python language server
 				"clangd", -- for c, c++ language server
 
