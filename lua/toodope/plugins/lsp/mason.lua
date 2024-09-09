@@ -29,7 +29,7 @@ return {
 				"emmet_ls",
 				"prismals",
 
-				"tsserver",
+				"ts_ls",
 				"eslint",
 				"html",
 				"cssls", -- for css, scss, less
