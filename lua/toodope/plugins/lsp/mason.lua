@@ -25,39 +25,39 @@ return {
 		mason_lspconfig.setup({
 			-- list of servers for mason to install
 			ensure_installed = {
-				"svelte",
-				"emmet_ls",
-				"prismals",
-
-				"ts_ls",
-				"eslint",
-				"html",
-				"cssls", -- for css, scss, less
-				"tailwindcss",
-				"graphql",
-
-				"lua_ls",
-				"marksman", -- for markdown language server (with local doc link...)
-				"jdtls", -- for java language server
-				"jedi_language_server", -- for python language server
-				"clangd", -- for c, c++ language server
-
-				"docker_compose_language_service", -- for docker-compose
-				"dockerls", -- for dockerfile
-
-				"cmake", -- for cmake
+				-- "svelte",
+				-- "emmet_ls",
+				-- "prismals",
+				--
+				-- "ts_ls",
+				-- "eslint",
+				-- "html",
+				-- "cssls", -- for css, scss, less
+				-- "tailwindcss",
+				-- "graphql",
+				--
+				-- "lua_ls",
+				-- "marksman", -- for markdown language server (with local doc link...)
+				-- "jdtls", -- for java language server
+				-- "jedi_language_server", -- for python language server
+				-- "clangd", -- for c, c++ language server
+				--
+				-- "docker_compose_language_service", -- for docker-compose
+				-- "dockerls", -- for dockerfile
+				--
+				-- "cmake", -- for cmake
 			},
 		})
 
 		mason_tool_installer.setup({
 			ensure_installed = {
-				"prettier", -- prettier formatter
-				"stylua", -- lua formatter
-				"isort", -- python formatter
-				"black", -- python formatter
-				-- "pylint", -- python linter, install in environment we want instead: https://github.com/williamboman/mason.nvim/issues/1336
-				"google-java-format", -- java formatter
-				"cmakelang", -- cmake formatter and linter
+				-- "prettier", -- prettier formatter
+				-- "stylua", -- lua formatter
+				-- "isort", -- python formatter
+				-- "black", -- python formatter
+				-- -- "pylint", -- python linter, install in environment we want instead: https://github.com/williamboman/mason.nvim/issues/1336
+				-- "google-java-format", -- java formatter
+				-- "cmakelang", -- cmake formatter and linter
 			},
 		})
 
@@ -66,9 +66,9 @@ return {
 			automatic_installation = false,
 			handlers = {},
 			ensure_installed = {
-				"javatest", -- java-test (Java test runner)
-				"javadbg", -- java-debug-adapter (Java debugger)
-				"codelldb", -- C/C++ debugger
+				-- "javatest", -- java-test (Java test runner)
+				-- "javadbg", -- java-debug-adapter (Java debugger)
+				-- "codelldb", -- C/C++ debugger
 			},
 		})
 	end,

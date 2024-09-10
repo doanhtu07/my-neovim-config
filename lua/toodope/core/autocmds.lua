@@ -15,3 +15,12 @@ vim.api.nvim_create_autocmd("BufEnter", {
 		vim.cmd("setlocal wrap")
 	end,
 })
+
+function HiCursorFunc()
+	vim.api.nvim_set_hl(0, "Cursor", { fg = "#001424", bg = "#00ff91" })
+end
+
+vim.api.nvim_create_autocmd("ColorScheme", {
+	pattern = "*",
+	callback = HiCursorFunc,
+})
