@@ -1,3 +1,9 @@
+# LEGACY CODE NOW!!!
+
+Now, I merge neovim config into my dotfiles Github
+
+- https://github.com/doanhtu07/my-terminal-dotfiles
+
 # My Neovim Config
 
 Hey guys, this is the Neovim config that I learned from Josean Martinez on Youtube "How I Setup Neovim To Make It AMAZING in 2024: The Ultimate Guide"
